@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import router from "./routes/authRoute.js";
-import taskrouter from "./routes/taskRoutes.js"
 
 
 dotenv.config();
@@ -18,13 +17,12 @@ connecttodatabase()
 app.use(cookieParser());
 
 app.use(cors({
-    origin: "https://task-tracker-taupe-sigma.vercel.app", 
+    origin: "*", 
     credentials: true, 
 }));
 app.use(express.json()); 
 
 app.use("/api/auth",router);
-app.use("/api/tasks",taskrouter)
 
 
 app.listen(PORT, () => {

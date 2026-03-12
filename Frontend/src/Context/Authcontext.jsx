@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
         }
 
         const response = await axios.get(
-          "https://task-tracker-backend-8b5a.onrender.com/api/auth/verify",
+          "http://localhost:3000/api/auth/verify",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ const AuthProvider = ({ children }) => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "https://task-tracker-backend-8b5a.onrender.com/api/auth/logout",
+        "http://localhost:3000/api/auth/logout",
         {},
         {
           headers: {

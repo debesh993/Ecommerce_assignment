@@ -53,7 +53,7 @@ const Login = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "https://task-tracker-backend-8b5a.onrender.com/api/auth/login",
+        "http://localhost:3000/api/auth/login",
         form
       );
 
@@ -61,7 +61,7 @@ const Login = () => {
         localStorage.setItem("token", res.data.token);
 
         login(res.data.user);
-        navigate("/dashboard");
+        navigate("/");
       }
     } catch (error) {
       console.log(error.response?.data?.error);

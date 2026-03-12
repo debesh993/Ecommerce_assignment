@@ -66,14 +66,14 @@ const Signup = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "https://task-tracker-backend-8b5a.onrender.com/api/auth/signup",
+        "http://localhost:3000/api/auth/signup",
         form
       );
 
       if (res.data.success === true) {
         localStorage.setItem("token", res.data.token);
         login(res.data.user);
-        navigate("/dashboard");
+        navigate("/");
       }
     } catch (error) {
       setServerError(error.response?.data?.message);
