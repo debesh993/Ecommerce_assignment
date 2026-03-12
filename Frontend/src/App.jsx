@@ -8,7 +8,6 @@ import MainLayout from "./layout/MainLayout";
 import Products from "./pages/Products";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
-import CartProvider from "./context/CartContext";
 
 const router = createBrowserRouter([
   {
@@ -53,9 +52,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <CartProvider>
       <RouterProvider router={router} />
-    </CartProvider>
   );
 };
 
