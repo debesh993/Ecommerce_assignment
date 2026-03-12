@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../Context/CartContext";
 
 const products = [
   {
