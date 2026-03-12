@@ -5,10 +5,10 @@ import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import MainLayout from "./layout/MainLayout";
-import CartProvider from "./context/CartContext";
 import Products from "./pages/Products";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
+import CartProvider from "./context/CartContext";
 
 const router = createBrowserRouter([
   {
