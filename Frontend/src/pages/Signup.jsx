@@ -66,7 +66,7 @@ const Signup = () => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:3000/api/auth/signup",
+        "https://ecommerce-assignment-sejo.onrender.com/api/auth/signup",
         form
       );
 
